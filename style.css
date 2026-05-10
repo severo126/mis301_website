@@ -1,0 +1,197 @@
+/* ============================================================
+   Clint Tuttle's Webpage - style.css
+   ============================================================
+   Color palette (UT Austin inspired):
+   - Burnt orange: #BF5700  (primary background)
+   - Navy:        #14213D   (primary text)
+   - Khaki:       #E8DCC4   (cards / content panels)
+   - White:       #FFFFFF   (highlights and contrast)
+   ============================================================ */
+
+/* ---- Page basics ---- */
+body {
+  background-color: rgb(7, 7, 75);          /* burnt orange background */
+  color: #14213D;                     /* navy text for contrast  */
+  font-family: "Courier New", monospace;
+  max-width: 900px;
+  margin: 0 auto;                     /* centers the whole page  */
+  padding: 30px 20px;
+  line-height: 1.7;
+}
+
+/* ---- Page title ---- */
+.page-title {
+  text-align: center;
+  color: #14213D;                     /* navy title */
+  background-color: #E8DCC4;          /* khaki bar behind title */
+  font-size: 42px;
+  font-weight: bold;
+  padding: 20px;
+  border: 3px solid #5672ae;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+/* ---- Photo row at top: three images side-by-side ---- */
+.photo-row {
+  display: flex;                      /* puts items in a row */
+  justify-content: center;            /* centers them horizontally */
+  align-items: stretch;
+  gap: 8px;                           /* small space between photos */
+  margin: 20px 0 10px 0;
+}
+
+.row-photo {
+  width: 50%;                         /* each photo takes ~one-third */
+  height: 280px;                      /* all photos same height */
+  object-fit: cover;                  /* crop to fill, no distortion */
+  border: 4px solid #14213D;          /* navy frame */
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+/* ---- Section headings (Fall 2026 Schedule, Videos, etc.) ---- */
+h3 {
+  color: #c8ac75;                     /* white headings on orange */
+  font-size: 26px;
+  border-bottom: 2px solid #14213D;
+  padding-bottom: 6px;
+  margin-top: 30px;
+}
+
+h3:hover {
+  color: #c4e7d0;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* ---- About Me paragraph ---- */
+.about-me {
+  background-color: #E8DCC4;          /* khaki "card" */
+  color: #14213D;
+  padding: 20px 25px;
+  border-radius: 8px;
+  border-left: 6px solid #14213D;
+  font-size: 17px;
+}
+
+/* ---- Resume line ---- */
+.resume-line {
+  text-align: center;
+  background-color: #FFFFFF;
+  color: #14213D;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ---- Captions under photos ---- */
+.caption {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 14px;
+  margin-top: 0;
+  padding: 0 20px;
+}
+
+/* ---- Lists ---- */
+ol, ul {
+  background-color: #E8DCC4;
+  color: #14213D;
+  padding: 18px 18px 18px 45px;       /* extra left padding for bullets */
+  border-radius: 8px;
+  font-size: 17px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ---- Links ---- */
+a {
+  color: #14213D;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #BF5700;
+  background-color: #E8DCC4;
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+
+/* ---- Horizontal rules ---- */
+hr {
+  border: none;
+  border-top: 2px dashed #14213D;
+  margin: 30px 0;
+}
+
+/* ---- Video grid: 2 videos per row ---- */
+.video-grid {
+  justify-items: center;
+  text-align:center;
+  background-color: #E8DCC4;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.video-grid iframe {
+  width: 75%;
+  justify-items: center;
+  text-align:center;
+  border: 3px solid #14213D;
+  border-radius: 6px;
+  background-color: #14213D;
+}
+
+/* ---- Contact line ---- */
+.contact-line {
+  text-align: center;
+  background-color: #FFFFFF;
+  color: #14213D;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* ---- Footer ---- */
+.page-footer {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 13px;
+  margin-top: 40px;
+  padding: 15px;
+  border-top: 2px solid #14213D;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Mobile / smaller screens ---- */
+@media (max-width: 700px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 30px;
+  }
+
+  /* Stack the photos vertically on small screens */
+  .photo-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row-photo {
+    width: 90%;
+    height: 250px;
+  }
+
+  /* Stack contact links on small screens */
+  .contact-line {
+    font-size: 15px;
+  }
+}

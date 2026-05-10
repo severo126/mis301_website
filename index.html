@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--The <title> tag is the name that shows up in the browser tab-->
+  <title>Severo Barreras's Webpage</title>
+
+  <!--This line connects our HTML page to a separate CSS file called style.css.
+      CSS controls how the page looks (colors, fonts, spacing).
+      Keeping CSS in its own file is a best practice—it keeps HTML clean.-->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!--This is the title at the top of the page-->
+  <h1 class="page-title">Severo Barreras's Webpage</h1>
+
+  <!--Three photos in a horizontal row.
+      The middle one is NOT actually me—see the caption below.
+      Lesson for class: alt text should always be honest about what an image is.-->
+  <div class="photo-row">
+    <img class="row-photo"
+         alt="Severo standing in front of a sphinx statue"
+         src="images/IMG_6845.jpg" />
+    <img class="row-photo"
+         alt="Severo standing in front of the Big Ben"
+         src="images/IMG_6872.jpg" />
+  </div>
+  <p class="caption">
+    <em>Me in front of a sphinx statue and the Big Ben!</em>
+  </p>
+
+  <!--This is the About Me paragraph-->
+  <p class="about-me">
+    Hi! I'm Severo Barreras. I'm a sophomore BAX major at UT Austin. I'm interested in programming, AI, math, history, engineering, and physics. I love learning About
+    machine learning. For fun I go off-roading in the desert, play sports, and learn languages. 
+  </p>
+
+  <hr />
+
+  <!--Work experience as a bulleted list-->
+  <h3> My Experience </h3>
+  <ul>
+    <li><strong>McCombs School of Business</strong> &mdash; Student (2025 &ndash; Present)</li>
+    <li><strong>Bonzai</strong> &mdash; Tech Intern (2025 &ndash; 2026)</li>
+    <li><strong>Deserto Pizza</strong> &mdash; Waiter (2024 &ndash; 2025)</li>
+  </ul>
+
+  <hr />
+
+  <!--My Favorite Things: a bulleted list of links-->
+  <h3>My Favorite Things</h3>
+  <ul>
+    <li><a href="https://www.imdb.com/title/tt5753856/" target="_blank">Dark</a> &mdash; One of the best mysteries I've ever seen</li>
+    <li><a href="https://claude.com/product/claude-code" target="_blank">Claude Code</a> &mdash; my favorite tool for working on personal programming projects</li>
+    <li><a href="https://yourdailygerman.com/" target="_blank">Your Daily German</a> &mdash; a cool website that explains the concepts in a fun way</li>
+  </ul>
+
+  <hr />
+
+  <!--YouTube videos: each one is an iframe.
+      Tip for students: to add your own, go to YouTube > Share > Embed,
+      and copy the FULL iframe tag.-->
+  <h3>My Favorite Videos</h3>
+
+  <div class="video-grid">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hDH7D8_31X8?si=0IDPCumCHfqPEI_I" title="My favorite song in the acoustic version" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jjp3WC8Unj8?si=4r70GFwHLx0biI40" title="Insane video on how anti-matter is made" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xd9GsTi6K48?si=E0r_6l4PzlMbca8U" title="How to make a pizza oven" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j0wJBEZdwLs?si=yHbBAtJvf3hQBQS-" title="A cool video on Laplace Transforms" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <hr />
+
+  <!--Contact section.
+      The mailto: link opens the user's email program.
+      LinkedIn opens in a new tab.-->
+  <h3>Contact Me</h3>
+  <p class="contact-line">
+    <a href="mailto:stb2267@my.utexas.edu">stb2267@my.utexas.edu</a>
+    &nbsp;|&nbsp;
+    <a href="http://www.linkedin.com/in/severo-barreras" target="_blank">My LinkedIn Profile</a>
+  </p>
+
+  <!--Footer with copyright-->
+  <footer class="page-footer">
+    Copyright &copy; 2026 Severo Barreras. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
