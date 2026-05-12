@@ -19,6 +19,33 @@ body {
   line-height: 1.7;
 }
 
+/* ---- Navigation bar ---- */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.nav-btn {
+  display: inline-block;
+  background-color: #14213D;
+  color: #FFFFFF;
+  padding: 12px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.nav-btn:hover {
+  background-color: #BF5700;
+  color: #FFFFFF;
+  transform: scale(1.05);
+  padding: 12px 30px;
+}
+
 /* ---- Page title ---- */
 .page-title {
   text-align: center;
@@ -193,5 +220,186 @@ hr {
   /* Stack contact links on small screens */
   .contact-line {
     font-size: 15px;
+  }
+}
+
+/* ============================================================
+   Hand-Tracking Game Styles
+   ============================================================ */
+
+/* Game container wrapper */
+.game-container {
+  background-color: #E8DCC4;
+  border: 4px solid #14213D;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 680px;
+  position: relative;
+}
+
+/* Game canvas */
+#gameCanvas {
+  display: block;
+  margin: 0 auto;
+  background-color: #14213D;
+  border: 3px solid #14213D;
+  border-radius: 8px;
+}
+
+/* HUD bar for score and lives */
+.game-hud {
+  display: flex;
+  justify-content: space-between;
+  background-color: #14213D;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Game control buttons */
+.game-controls {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.game-btn {
+  background-color: #14213D;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.game-btn:hover {
+  background-color: #BF5700;
+  transform: scale(1.05);
+}
+
+.game-btn:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Game over overlay */
+.game-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background-color: rgba(20, 33, 61, 0.9);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.overlay-content {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.overlay-content h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #E8DCC4;
+}
+
+.overlay-content p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Game instructions section */
+.game-instructions {
+  background-color: #E8DCC4;
+  padding: 20px 25px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 680px;
+}
+
+.game-instructions h3 {
+  margin-top: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.game-instructions ul {
+  margin: 10px 0;
+}
+
+.game-instructions p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+/* Game promo on index page */
+.game-promo {
+  background-color: #E8DCC4;
+  color: #14213D;
+  padding: 20px 25px;
+  border-radius: 8px;
+  border-left: 6px solid #BF5700;
+  font-size: 17px;
+  text-align: center;
+}
+
+.game-promo a {
+  display: inline-block;
+  background-color: #14213D;
+  color: #FFFFFF;
+  padding: 10px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.game-promo a:hover {
+  background-color: #BF5700;
+  color: #FFFFFF;
+}
+
+/* Mobile adjustments for game */
+@media (max-width: 700px) {
+  .game-container {
+    padding: 10px;
+  }
+
+  #gameCanvas {
+    width: 100%;
+    height: auto;
+  }
+
+  .game-hud {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .game-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .overlay-content h2 {
+    font-size: 28px;
+  }
+
+  .overlay-content p {
+    font-size: 18px;
   }
 }

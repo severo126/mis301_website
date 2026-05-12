@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hand-Tracking Game - Severo Barreras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!--Navigation buttons-->
+  <nav class="nav-bar">
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="game.html" class="nav-btn">Play Game</a>
+  </nav>
+
+  <h1 class="page-title">Catch the Falling Objects!</h1>
+
+  <p class="about-me" style="text-align: center;">
+    Use your hand to catch falling stars, coins, and fruits!
+    Allow webcam access and move your hand in front of the camera.
+  </p>
+
+  <div class="game-container">
+    <!-- Hidden video element for webcam feed -->
+    <video id="webcam" autoplay playsinline style="display: none;"></video>
+
+    <!-- Game canvas -->
+    <canvas id="gameCanvas" width="640" height="480"></canvas>
+
+    <!-- HUD for score and lives -->
+    <div class="game-hud">
+      <span id="scoreDisplay">Score: 0</span>
+      <span id="livesDisplay">Lives: 3</span>
+    </div>
+
+    <!-- Control buttons -->
+    <div class="game-controls">
+      <button id="startBtn" class="game-btn">Start Game</button>
+      <button id="restartBtn" class="game-btn" style="display: none;">Restart</button>
+    </div>
+
+    <!-- Game over overlay -->
+    <div id="gameOverlay" class="game-overlay" style="display: none;">
+      <div class="overlay-content">
+        <h2>Game Over!</h2>
+        <p>Final Score: <span id="finalScore">0</span></p>
+        <button id="playAgainBtn" class="game-btn">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-instructions">
+    <h3>How to Play</h3>
+    <ul>
+      <li><strong>Stars</strong> - 10 points (rare)</li>
+      <li><strong>Coins</strong> - 5 points (medium)</li>
+      <li><strong>Fruits</strong> - 3 points (common)</li>
+    </ul>
+    <p>You have 3 lives. Miss an object and lose a life!</p>
+  </div>
+
+  <footer class="page-footer">
+    Copyright &copy; 2026 Severo Barreras. All Rights Reserved.
+  </footer>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
